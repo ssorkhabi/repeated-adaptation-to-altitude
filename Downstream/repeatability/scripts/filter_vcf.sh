@@ -5,8 +5,7 @@
 # Pre-processes a VCF before GWAS:
 #   1. Remove individuals with mean depth of coverage < min_depth
 #   2. Remove sites with > max_missing missingness across retained individuals
-#   3. Remove sites with MAF < min_maf (removes singletons and artefact-prone
-#      rare variants while retaining rare variants with genuine statistical power)
+#   3. Remove sites with MAF < min_maf
 #
 # Tools required: bcftools
 
