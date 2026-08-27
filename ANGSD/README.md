@@ -1,1 +1,1 @@
-
+To ensure the repeatability signal detected is not an artefact of low depth (<10x), I carried out association studies using genotype likelihood for *He. erato* and *Mel. mothone*, the species with the highest and lowest counts, respectively. These are the scripts, adapted from Montejo-Kovacevich et al (2022).
