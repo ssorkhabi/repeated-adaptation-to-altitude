@@ -1,4 +1,6 @@
-# RepAdapt Pipeline (Steps 1–6c)
+"""
+RepAdapt (Steps 1–6c), adapted from https://github.com/RepAdapt and Whiting et al (2024)
+"""
 
 import os
 import pandas as pd
