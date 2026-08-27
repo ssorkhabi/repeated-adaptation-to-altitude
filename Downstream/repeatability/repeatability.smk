@@ -1,8 +1,9 @@
 """
 Altitude GWAS → SNP–gene mapping → PicMin → BLAST
 Species: Hera, Hmel, Hnum, Hsar, Hana, Isal, Mlys, Mpol, Mmes, Mmot, Mmen
-Traits: continuous, categorical (bottom 25% vs top 25% altitude per species), and threshold (200m and 1000m as fixed thresholds)
+Traits: continuous, relative (bottom 25% vs top 25% altitude per species), and fixed threshold (200m and 1000m)
 
+Rule 6 (PicMin) and all associated scripts are based on https://github.com/TBooker/PicMin and Booker et al (2023)
 """
 import os
 import pandas as pd
