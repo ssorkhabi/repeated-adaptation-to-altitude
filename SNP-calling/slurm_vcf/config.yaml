@@ -1,0 +1,44 @@
+# SLURM executor configuration for vcf.smk
+
+executor: slurm
+jobs: 100
+use-conda: true
+
+default-resources:
+  runtime: 60
+  slurm_partition: "icelake"
+  slurm_extra: "--mail-type=FAIL --mail-user=ss3335@cam.ac.uk" # change to your email
+  mem_mb: 8000
+
+# Rule-specific SLURM resources
+set-threads:
+  mpileup: 4
+  filter_vcfs: 8
+  concat_vcfs: 3
+  combine_depth_tables: 1
+
+set-resources:
+  mpileup:
+    runtime: 1800
+    slurm_account: "JIGGINS-SL2-CPU"
+    mem_mb: 24000
+
+  filter_vcfs:
+    runtime: 1800
+    slurm_account: "JIGGINS-SL2-CPU"
+    mem_mb: 16000
+
+  concat_parts:
+    runtime: 1800
+    slurm_account: "JIGGINS-SL2-CPU"
+    mem_mb: 32000
+  
+  concat_final:
+    runtime: 1440
+    slurm_account: "JIGGINS-SL2-CPU"
+    mem_mb: 32000
+
+  maf_filters:
+    runtime: 720
+    slurm_account: "JIGGINS-SL3-CPU"
+    mem_mb: 8000

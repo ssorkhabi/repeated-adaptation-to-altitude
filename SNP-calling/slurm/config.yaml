@@ -1,0 +1,51 @@
+# SLURM executor configuration for Snakemake
+
+executor: slurm
+jobs: 20
+use-conda: true
+
+default-resources:
+  runtime: 240
+  slurm_partition: "icelake"
+  slurm_account: "JIGGINS-SL2-CPU"
+  slurm_extra: "--mail-type=FAIL --mail-user=ss3335@cam.ac.uk" # change to your email
+  mem_mb: 8000
+  disk_mb: 50000
+
+# Rule-specific SLURM resources
+set-threads:
+  trim_reads: 16
+  align_reads: 32
+  collect_metrics: 2
+  remove_duplicates: 16
+  change_read_group: 2
+  merge_bams: 4
+  gatk_realignment: 8
+  collect_final_metrics: 2
+  local_depth: 8
+  prepare_depth_files: 2
+
+set-resources:
+  trim_reads:
+    runtime: 180
+    mem_mb: 8000
+
+  align_reads:
+    runtime: 360
+    mem_mb: 64000
+
+  remove_duplicates:
+    runtime: 480
+    mem_mb: 32000
+
+  merge_bams:
+    runtime: 360
+    mem_mb: 16000
+
+  gatk_realignment:
+    runtime: 840
+    mem_mb: 32000
+
+  local_depth:
+    runtime: 480
+    mem_mb: 16000
