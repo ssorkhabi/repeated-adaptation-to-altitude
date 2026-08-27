@@ -1,4 +1,6 @@
-# RepAdapt – Variant Calling (Steps 7–9)
+"""
+RepAdapt(Steps 7–9) adapted from https://github.com/RepAdapt and Whiting et al (2024)
+"""
 
 import os
 import pandas as pd
