@@ -1,0 +1,15 @@
+name: enrichment
+
+channels:
+  - bioconda
+  - conda-forge
+  - defaults
+
+dependencies:
+  - r-base=4.4
+  - r-tidyverse
+  - r-cowplot
+  - bioconductor-clusterprofiler
+  - bioconductor-reactomepa
+  - bioconductor-org.dm.eg.db
+  - bioconductor-enrichplot

@@ -1,0 +1,24 @@
+name: gwas
+
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+
+dependencies:
+  # GWAS tools
+  - plink=1.90b6.21
+  - gemma=0.98.5
+
+  # Clean up tools
+  - bedtools=2.27.1
+
+  # R and required packages
+  - r-base=4.4        
+  - r-tidyverse
+  - r-qqman
+  - r-cowplot
+  - r-poolr
+  - r-devtools        # for installing PicMin from GitHub
+  - r-remotes
+  - r-scales

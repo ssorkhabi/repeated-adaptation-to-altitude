@@ -1,0 +1,15 @@
+name: beagle
+
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+
+dependencies:
+  # Pre-requisites
+  - python
+  - r-base=4.4
+  - bcftools=1.16
+
+  # Imputation and phasing
+  - beagle=5.5

@@ -1,0 +1,64 @@
+# SLURM executor configuration for Snakemake
+
+executor: slurm
+jobs: 100
+use-conda: true
+
+default-resources:
+  runtime: 60
+  threads: 8
+  slurm_partition: "icelake"
+  slurm_account: "JIGGINS-SL2-CPU"
+  slurm_extra: "--mail-type=FAIL --mail-user=ss3335@cam.ac.uk"
+  mem_mb: 8000
+  disk_mb: 50000
+
+# Rule-specific SLURM resources
+set-threads:
+  filter_vcf:       8
+  impute_scaffold: 76
+  manhattan:       24
+  picmin:          70
+
+set-resources:
+  filter_vcf:
+    runtime: 720
+    mem_mb: 16000
+
+  impute_scaffold:
+    runtime: 2160
+    slurm_partition: "icelake-himem"
+    mem_mb: 512000
+
+  make_binary_phenotypes:
+    runtime: 90
+    mem_mb: 4000
+
+  gwas_continuous:
+    runtime: 2160
+    mem_mb: 65536
+
+  gwas_categorical:
+    runtime: 2160
+    mem_mb: 65536
+
+  gwas_threshold:
+    runtime: 2160
+    mem_mb: 65536
+
+  make_gene_bed:
+    runtime: 60
+    mem_mb: 4000
+
+  snp_gene_map:
+    runtime: 60
+    mem_mb: 8000
+
+  manhattan:
+    runtime: 240
+    mem_mb: 65536
+
+  picmin:
+    runtime: 2160
+    slurm_partition: "icelake-himem"
+    mem_mb: 512000
