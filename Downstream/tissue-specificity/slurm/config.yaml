@@ -1,0 +1,42 @@
+# SLURM executor configuration for Snakemake
+
+executor: slurm
+jobs: 100
+use-conda: true
+
+default-resources:
+  runtime: 60
+  slurm_partition: "icelake"
+  slurm_account: "JIGGINS-SL2-CPU"
+  slurm_extra: "--mail-type=FAIL --mail-user=ss3335@cam.ac.uk"
+  mem_mb: 8000
+  disk_mb: 50000
+
+set-threads:
+  salmon_quant: 8
+
+set-resources:
+  salmon_quant:
+    runtime: 60
+    mem_mb: 16000
+
+  compute_tau:
+    runtime: 20
+    mem_mb: 32000
+
+  picmin_pleiotropy_comparison:
+    runtime: 30
+    threads: 8
+    mem_mb: 16000
+
+  tissue_expression_significant:
+    runtime: 180
+    mem_mb: 8000
+
+  coexpression_network:
+    runtime: 180
+    mem_mb: 8000
+
+  pleiotropy_duplication:
+    runtime: 20
+    mem_mb: 4000

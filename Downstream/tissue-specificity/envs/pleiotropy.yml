@@ -1,0 +1,21 @@
+name: pleiotropy
+
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+  
+dependencies:
+  # Quantification
+  - salmon=1.11.4
+
+  # R and required packages
+  - r-base=4.4
+  - r-tidyverse
+  - r-cowplot
+  - bioconductor-tximport
+  - bioconductor-txdbmaker
+  - bioconductor-genomicfeatures
+  - bioconductor-annotationdbi
+  - r-igraph
+  - r-ggraph

@@ -1,0 +1,32 @@
+# Project paths
+root_dir: "/rds/project/rds-fT31urweTx0/projects/project_altitude_ConvergentEvolution"
+pipeline_dir: "/rds/project/rds-fT31urweTx0/projects/project_altitude_ConvergentEvolution/Downstream/pleiotropy_pipeline"
+
+# Input files
+sample_list:     "/rds/project/rds-fT31urweTx0/projects/project_altitude_ConvergentEvolution/Downstream/pleiotropy_pipeline/infoFiles/Mmes_RNAseq_IDs.txt"
+salmon_index:    "/rds/project/rds-fT31urweTx0/projects/project_altitude_ConvergentEvolution/Downstream/pleiotropy_pipeline/genome/Mmes_index"
+gff:             "/rds/project/rds-fT31urweTx0/projects/project_altitude_ConvergentEvolution/Downstream/pleiotropy_pipeline/genome/Mmes.gff3"
+sample_metadata: "/rds/project/rds-fT31urweTx0/projects/project_altitude_ConvergentEvolution/Downstream/pleiotropy_pipeline/infoFiles/samples_metadata.csv"
+orthogroups:     "/rds/project/rds-fT31urweTx0/projects/project_altitude_ConvergentEvolution/Archive/06_OrthoFinder/proteomes/OrthoFinder/Results/Orthogroups/Orthogroups.tsv"
+
+# PicMin results from the GWAS pipeline (used in the comparison step)
+picmin_continuous: "/rds/project/rds-fT31urweTx0/projects/project_altitude_ConvergentEvolution/Downstream/gwas_pipeline/results/picmin/picmin_continuous_results.csv"
+picmin_categorical: "/rds/project/rds-fT31urweTx0/projects/project_altitude_ConvergentEvolution/Downstream/gwas_pipeline/results/picmin/picmin_categorical_results.csv"
+
+# Results directories
+quants_dir: "/rds/project/rds-fT31urweTx0/projects/project_altitude_ConvergentEvolution/Downstream/pleiotropy_pipeline/results/quants"
+tau_dir:    "/rds/project/rds-fT31urweTx0/projects/project_altitude_ConvergentEvolution/Downstream/pleiotropy_pipeline/results/tau"
+plots_dir:  "/rds/project/rds-fT31urweTx0/projects/project_altitude_ConvergentEvolution/Downstream/pleiotropy_pipeline/results/plots"
+
+# OrthoFinder column name for Mmes
+of_col_mmes: "Mechanitis_messenoides"
+
+# Salmon settings
+salmon_threads: 8
+
+# PicMin fdr threshold for comparison
+picmin_fdr_threshold: 0.01
+
+# Figure panel settings
+max_significant_ogs_plotted: 20   # max orthogroups shown in tissue_expression_significant panel
+coexpression_n_genes: 20          # network size for coexpression_network panel
