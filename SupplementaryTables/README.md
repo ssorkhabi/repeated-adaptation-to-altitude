@@ -1,4 +1,4 @@
-**Supplementary Table S2.1** | short-read sequencing data metadata
+**Supplementary Table S2.1** | short-read sequencing metadata (public, collaborator, and new)
 
 **Supplementary Table S2.2** | RNA-seq metadata
 
