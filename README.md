@@ -31,8 +31,8 @@ _**Note.**_ Only the first two directory levels are shown here.
 │   ├── slurm
 │   ├── slurm_vcf
 │   └── vcf.smk
-├── SupplementaryTables
-│   ├── SupplementaryTable-S2-1.xlsx
-│   ├── SupplementaryTable-S2-2.xlsx
-└── └── SupplementaryTable-S2-4.xlsx
+└── SupplementaryTables
+    ├── SupplementaryTable-S2-1.xlsx
+    ├── SupplementaryTable-S2-2.xlsx
+    └── SupplementaryTable-S2-4.xlsx
 ```
