@@ -14,7 +14,6 @@ _**Note.**_ Only the first two directory levels are shown here.
 │   ├── angsd-lrt-to-bed.sh
 │   ├── angsd-saf-maf-gl.sh
 │   ├── angsd_assoc.sh
-│   ├── compare_pvals.sh
 │   ├── full-comparison.sh
 │   ├── gemma-to-bed.sh
 │   ├── make-angsd-pheno.sh
